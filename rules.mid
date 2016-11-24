@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MIDConfig xmlns:ns2="de.appsist.service.mid.rules">
+    <instanceVersion>1.0</instanceVersion>
+    <protocolVersion>1.0</protocolVersion>
+    <rules>
+        <entry>
+            <key>
+                <machineID>Station20</machineID>
+                <stationID>DNC_DNCB_DSBC_Automation</stationID>
+            </key>
+            <value>
+                <MachineIdentifier>
+                    <machineID>Station20</machineID>
+                    <stationID>DNC_DNCB_DSBC_Automation</stationID>
+                </MachineIdentifier>
+                <rules>
+                    <condition>
+                        <value>
+                            <caption></caption>
+                            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="asBoolean">
+<value>true</value>
+                            </value>
+                        </value>
+                        <variable>
+                            <caption>Automatikmodus aktiv</caption>
+                            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="asBoolean">
+<value>false</value>
+                            </value>
+                        </variable>
+                        <vergleich>EQ</vergleich>
+                    </condition>
+                    <action>Automatikmodus aktiv</action>
+                    <mode>ALL</mode>
+                    <name>Automatikmodus aktiv</name>
+                    <tag></tag>
+                </rules>
+                
+                
+                <rules>
+                    <condition>
+                        <value>
+                            <caption></caption>
+                            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="asBoolean">
+                                <value>true</value>
+                            </value>
+                        </value>
+                        <variable>
+                            <caption>Verriegelung aktiv</caption>
+                            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="asBoolean">
+                                <value>false</value>
+                            </value>
+                        </variable>
+                        <vergleich>EQ</vergleich>
+                    </condition>
+                    <action>Verriegelung aktiv</action>
+                    <mode>ALL</mode>
+                    <name> Verriegelung aktiv </name>
+                    <tag></tag>
+                </rules>
+                
+                
+                
+                <rules>
+                    <condition>
+                        <value>
+                            <caption></caption>
+                            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="asBoolean">
+                                <value>true</value>
+                            </value>
+                        </value>
+                        <variable>
+                            <caption>Fuellstand Loctite im Sollbereich</caption>
+                            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="asBoolean">
+                                <value>false</value>
+                            </value>
+                        </variable>
+                        <vergleich>EQ</vergleich>
+                    </condition>
+                    <action>Fuellstand Loctite im Sollbereich</action>
+                    <mode>ALL</mode>
+                    <name> Fuellstand Loctite im Sollbereich </name>
+                    <tag></tag>
+                </rules>
+                
+                
+                
+                
+                <rules>
+                    <condition>
+                        <value>
+                            <caption></caption>
+                            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="asBoolean">
+                                <value>true</value>
+                            </value>
+                        </value>
+                        <variable>
+                            <caption>Tuer 3 geschlossen</caption>
+                            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="asBoolean">
+                                <value>false</value>
+                            </value>
+                        </variable>
+                        <vergleich>EQ</vergleich>
+                    </condition>
+                     <condition>
+                        <value>
+                            <caption></caption>
+                            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="asBoolean">
+                                <value>true</value>
+                            </value>
+                        </value>
+                        <variable>
+                            <caption>Tuer 4 geschlossen</caption>
+                            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="asBoolean">
+                                <value>false</value>
+                            </value>
+                        </variable>
+                        <vergleich>EQ</vergleich>
+                    </condition>
+                    <action>Tueren vorne geschlossen</action>
+                    <mode>ALL</mode>
+                    <name> Tueren vorne geschlossen </name>
+                    <tag></tag>
+                </rules>
+                
+                <rules>
+                 <condition>
+                        <value>
+                            <caption></caption>
+                            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="asBoolean">
+                                <value>true</value>
+                            </value>
+                        </value>
+                        <variable>
+                            <caption>Tuer 1 geschlossen</caption>
+                            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="asBoolean">
+                                <value>false</value>
+                            </value>
+                        </variable>
+                        <vergleich>EQ</vergleich>
+                    </condition>
+                 <condition>
+                        <value>
+                            <caption></caption>
+                            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="asBoolean">
+                                <value>true</value>
+                            </value>
+                        </value>
+                        <variable>
+                            <caption>Tuer 2 geschlossen</caption>
+                            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="asBoolean">
+                                <value>false</value>
+                            </value>
+                        </variable>
+                        <vergleich>EQ</vergleich>
+                    </condition>
+                    <condition>
+                        <value>
+                            <caption></caption>
+                            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="asBoolean">
+                                <value>true</value>
+                            </value>
+                        </value>
+                        <variable>
+                            <caption>Tuer 3 geschlossen</caption>
+                            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="asBoolean">
+                                <value>false</value>
+                            </value>
+                        </variable>
+                        <vergleich>EQ</vergleich>
+                    </condition>
+                     <condition>
+                        <value>
+                            <caption></caption>
+                            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="asBoolean">
+                                <value>true</value>
+                            </value>
+                        </value>
+                        <variable>
+                            <caption>Tuer 4 geschlossen</caption>
+                            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="asBoolean">
+                                <value>false</value>
+                            </value>
+                        </variable>
+                        <vergleich>EQ</vergleich>
+                    </condition>
+                    <action>Tueren gesamt geschlossen</action>
+                    <mode>ALL</mode>
+                    <name> Tueren gesamt geschlossen </name>
+                    <tag></tag>
+                </rules>
+                
+                
+                
+                <rules>
+                    <condition>
+                        <value>
+                            <caption></caption>
+                            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="asBoolean">
+                                <value>true</value>
+                            </value>
+                        </value>
+                        <variable>
+                            <caption>Verriegelung aktiv</caption>
+                            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="asBoolean">
+                                <value>false</value>
+                            </value>
+                        </variable>
+                        <vergleich>EQ</vergleich>
+                    </condition>
+                    <action>Verriegelung aktiv</action>
+                    <mode>ALL</mode>
+                    <name> Verriegelung aktiv  </name>
+                    <tag></tag>
+                </rules>
+                
+                <rules>
+                    <condition>
+                        <value>
+                            <caption></caption>
+                            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="asBoolean">
+                                <value>true</value>
+                            </value>
+                        </value>
+                        <variable>
+                            <caption>Automatikmodus aktiv</caption>
+                            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="asBoolean">
+                                <value>false</value>
+                            </value>
+                        </variable>
+                        <vergleich>EQ</vergleich>
+                    </condition>
+                    <action>Automatikmodus aktiv</action>
+                    <mode>ALL</mode>
+                    <name> Automatikmodus aktiv  </name>
+                    <tag></tag>
+                </rules>                
+                
+                
+                
+                
+                
+            </value>
+        </entry>
+       
+    </rules>
+</MIDConfig>

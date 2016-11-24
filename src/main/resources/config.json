@@ -1,0 +1,289 @@
+{
+  "version":"2015-09-24-1056",
+  "webserver":{
+    "port":8080,
+    "statics":"www"
+  },
+  "eventBusBridge":{
+    "inbound":[
+      {
+        "address":"appsist:service:iid:server"
+      },
+      {
+        "address_re":"appsist:service:iid:server:.+"
+      }
+    ],
+    "outbound":[
+      {
+        "address_re":"appsist:service:iid:client:.+"
+      }
+    ]
+  },
+  "deploys":[
+    {
+      "id":"io.vertx~mod-mongo-persistor~2.1.0",
+      "config":{
+        "address":"vertx.mongopersistor",
+        "host":"localhost",
+        "port":27017,
+        "pool_size":10,
+        "db_name":"m4demo"
+      }
+    }
+  ],
+  "services":{
+    "auth":{
+      "version":"1.1.0",
+      "config":{
+        "webserver":{
+          "port":8081,
+          "statics":"webroot",
+          "basePath":"/services/auth"
+        },
+        "debugMode":true,
+        "mongoPersistorAddress":"vertx.mongopersistor",
+        "hoursUntilSessionPurge":24
+      }
+    },
+    "sparql-connector":{
+      "version":"2.0.0",
+      "config":{
+        "webserver":{
+          "port":8082,
+          "statics":"www",
+          "basePath":"/services/sparqlconnector"
+        },
+        "sparql":{
+          "reqBaseUrl":"localhost",
+          "reqPath":"/sparql",
+          "reqBasePort":"8443"
+        }
+      }
+    },
+    "cds":{
+      "version":"1.0.0",
+      "config":{
+        "webserver":{
+          "port":8083,
+          "basePath":"/services/cds"
+        },
+        "staticContentPath":"/home/cyre/workspace/m4-demo/static",
+        "contentPath":"/home/cyre/workspace/m4-demo/packages"
+      }
+    },
+    "iid-server":{
+      "version":"1.2.5-SNAPSHOT",
+      "config":{
+        "webserver":{
+          "port":8086,
+          "basePath":"/services/iid"
+        },
+        "services":{
+          "cds":{
+            "http":{
+              "host":"localhost",
+              "port":8080,
+              "secure":false,
+              "path":"/services/cds"
+            }
+          },
+          "auth":{
+            "eb":"appsist:service:auth"
+          }
+        },
+        "locations":[
+          {
+            "id":"station-20",
+            "type":"fix",
+            "displayName":"Anlage 1: Station 20",
+            "building":"Halle 1",
+            "raw":{
+
+            }
+          },
+          {
+            "id":"station-60",
+            "type":"fix",
+            "displayName":"Anlage 4: Station 60",
+            "building":"Halle 1",
+            "raw":{
+
+            }
+          },
+          {
+            "id":"station-40",
+            "type":"fix",
+            "displayName":"Anlage 2: Station 40",
+            "building":"Halle 2",
+            "raw":{
+
+            }
+          }
+        ],
+        "debugMode":true
+      }
+    },
+    "pki":{
+      "version":"1.0.1",
+      "config":{
+        "webserver":{
+          "port":8087,
+          "statics":"www",
+          "basePath":"/services/pki"
+        },
+        "services":{
+          "host":"localhost",
+          "port":8080,
+          "secure":false,
+          "baseUrl":"/services"
+        },
+        "processEngine":"simple",
+        "processDefinitionPath":"/home/cyre/workspace/m4-demo/processes/"
+      }
+    },
+    "measures-service":{
+      "version":"2.0.2",
+      "config":{
+        "webserver":{
+          "port":8088,
+          "statics":"www",
+          "basePath":"/services/measureservice"
+        },
+        "sparql":{
+          "ontologyPrefix":"app:",
+          "ontologyUri":"http://www.appsist.de/ontology/"
+        }
+      }
+    },
+    "usermodel-service":{
+      "version":"2.0.0",
+      "config":{
+        "webserver":{
+          "port":8089,
+          "statics":"www",
+          "basePath":"/services/usermodel"
+        },
+        "test":true
+      }
+    },
+    "nsa-service":{
+      "version":"1.0.0",
+      "config":{
+        "webserver":{
+          "port":8090,
+          "statics":"www",
+          "basePath":"/services/nsaservice"
+        }
+      }
+    },
+    "ihs":{
+      "version":"1.0.0",
+      "config":{
+        "webserver":{
+          "port":8091,
+          "statics":"www",
+          "basePath":"/services/ihs"
+        }
+      }
+    },
+    "lbd":{
+      "version":"1.1.2",
+      "config":{
+        "webserver":{
+          "port":8092,
+          "statics":"www",
+          "basePath":"/services/lbd"
+        }
+      }
+    },
+    "content-navigation-service":{
+      "version":"1.0.2",
+      "config":{
+
+      }
+    },
+    "performance-support":{
+      "version":"1.1.4",
+      "config":{
+        "webserver":{
+          "port":8093,
+          "statics":"static",
+          "basePath":"/services/psd"
+        },
+        "db":"vertx.mongopersistor",
+        "auth":"vertx.basicauthmanager",
+        "services":{
+          "host":"localhost",
+          "port":8080,
+          "secure":false,
+          "paths":{
+            "pki":"/services/pki",
+            "ihs":"/services/ihs"
+          }
+        },
+        "debugMode":true
+      }
+    },
+    
+    
+      "mid":{
+      "version":"1.2.1",
+      "RESTport":8095,
+      "config": {
+            "webserver" : {
+                            "port" : 8085,
+                            "statics" : "static",
+                            "basePath" : "/services/mid",
+                            "csspath" : "/home/cyre/workspace-appsist/machine-information-service/src/main/resources/css/"
+                        },
+            "configPath" : "/home/cyre/workspace/m4-demo/rules/"
+       }
+    },  
+    
+    
+    "msd":{
+        "version":"0.1.0",
+        "config":{
+            "webserver": {
+                "port": 8096,
+                "basePath" : "/services/msd",
+                "secure" : false
+            },
+            "mid" : {
+                "port" : 8095,
+                "basePath" : "/services/mid"
+            },
+            "machine" : {
+                "vendorId" : 1,
+                "machineID" : 30,
+                "serialNumber" : "Machine XYZ"
+            },
+                "station" : {
+                "stationId" : 30,
+                "siteId" : 1
+            },
+            "processes" : {
+                "loctite-wechseln" : {
+                    "processId" : "0b4e2ad2-09dc-11e5-a6c0-1697f925ec7b",
+                    "propertyName" : "Loctite"
+                },
+                "fett-wechseln" : {
+                    "processId" : "0b4e5e9e-09dc-11e5-a6c0-1697f925ec7b",
+                    "propertyName" : "Fett"
+                }
+            }
+       }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+
+  },
+  "disabled":{
+  }
+}

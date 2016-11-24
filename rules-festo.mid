@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MIDConfig xmlns:ns2="de.appsist.service.mid.rules">
+    <instanceVersion>1.0</instanceVersion>
+    <protocolVersion>1.0</protocolVersion>
+    <rules>
+        <entry>
+            <key>
+                <machineID>Maschine30</machineID>
+                <stationID>Anlage1</stationID>
+            </key>
+            <value>
+                <MachineIdentifier>
+                    <machineID>Maschine30</machineID>
+                    <stationID>Anlage1</stationID>
+                </MachineIdentifier>
+                <rules>
+                    <condition>
+                        <value>
+                            <caption></caption>
+                            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="asDouble">
+<value>0.1</value>
+                            </value>
+                        </value>
+                        <variable>
+                            <caption>Loctite</caption>
+                            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="asDouble">
+<value>0.0</value>
+                            </value>
+                        </variable>
+                        <vergleich>LE</vergleich>
+                    </condition>
+                    <action>Loctite wenig</action>
+                    <mode>ALL</mode>
+                    <name>Loctite wenig</name>
+                    <tag></tag>
+                </rules>
+                <rules>
+                    <condition>
+                        <value>
+                            <caption></caption>
+                            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="asDouble">
+<value>0.1</value>
+                            </value>
+                        </value>
+                        <variable>
+                            <caption>Fett</caption>
+                            <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="asDouble">
+<value>0.0</value>
+                            </value>
+                        </variable>
+                        <vergleich>LE</vergleich>
+                    </condition>
+                    <action>Fett wenig</action>
+                    <mode>ALL</mode>
+                    <name>Fett wenig</name>
+                    <tag></tag>
+                </rules>
+            </value>
+        </entry>
+    </rules>
+</MIDConfig>

@@ -1,0 +1,15 @@
+{
+"version":"1.1.0",
+		"config": {
+            "webserver" : {
+                            "port" : 8085,
+                            "statics" : "static",
+                            "basePath" : "/services/mid",
+                            "csspath" : "/home/cyre/workspace-appsist/machine-information-service/src/main/resources/css/"
+                        },
+            "configPath" : "/home/cyre/workspace/m4-demo/rules/",
+            "RESTport":8095,
+            "useHeartbeat":false,
+            "useOntology":false
+       }
+}

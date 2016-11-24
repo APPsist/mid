@@ -1,0 +1,79 @@
+<html>
+  <head>
+  <meta http-equiv="refresh" content="1" > 
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+   <title>APPsist Station</title>
+    <meta content="">
+    <link rel="stylesheet" href="{{csspath}}">
+    
+    <style>
+    
+.on-off-container {
+    width:90px;
+    height:90px;
+}
+.on-off-container .on-off {
+    -webkit-border-radius: 90px;
+    -moz-border-radius: 90px;
+    border-radius: 90px;
+    width:90px;
+    height:90px;
+    position:relative;
+    text-align:center;
+    color:#fff;
+    vertical-align:center;
+}
+.on-off-container .on-off .label {
+    position:absolute;
+    top:50%;
+    text-align:center;
+    width:100%;
+    margin-top:-10px;
+}
+.on-off-container .on-off.on {
+    background-color:green;
+}
+.on-off-container .on-off.off {
+    background-color:red;
+}
+
+th, td {
+    padding: 15px;
+}
+
+table {
+    border-spacing: 40px;
+}
+</style>
+</head>
+<body>
+
+<table style="width:100%" align="center">
+
+	<tr>
+
+		<td valign="top" align="center" bgcolor="#CFCFCF">
+		
+			{{#if useBalken}}
+			 	<div style="height:200px;width:50px;background-color:#A9BEC7;">
+			    <div style="width:100%;height:{{antipercent}}%;text-align:center;color:{{textcolor}};">{{percent}}%</div>
+			    <div style="width:100%;height:{{percent}}%;background-color:{{barcolor}};"></div>
+			{{else}}
+				{{#if useonoff}}
+				  <div class="on-off-container">
+				    <div class="on-off {{onoff}}">
+				    <div class="label">{{onoff}}</div>
+				    </div>
+					</div>
+				{{else}}
+					<h3>{{value}} {{unit}}</h3>
+				{{/if}}
+			{{/if}}
+			</td>
+	</tr>
+
+</table>
+  
+  </body>
+</html>
+

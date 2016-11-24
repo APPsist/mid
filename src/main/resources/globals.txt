@@ -1,0 +1,17 @@
+Stillstand@info
+Loctite wenig@warning
+Fett wenig@warning
+Fehlendes Bauteil@error
+Funktionsfaehiger Zustand@info
+Loctite leer@error
+Fett leer@error
+Fehlendes Werkzeug@error
+Fehler bei Schraubenzufuhr@error
+Festbrand im Schweissprozess@error
+Bauteil verloren@error
+Federmagazin leer@error
+Deckelmagazin leer@error
+Tuer offen@error
+Bauteil fehlt@error
+Handbetrieb@error
+Tuer offen@error
