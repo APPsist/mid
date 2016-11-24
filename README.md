@@ -1,9 +1,5 @@
-# Vert.x Example Maven Project
+# APPsist Maschinen-Informationsdienst
 
-Example project for creating a Vert.x module with a Gradle build.
+Der MID nutzt APPsistREST als Schnittstelle für die Maschinen. Anschließend werden die Daten mithilfe der rules interpretiert und als Events weitergesendet.
 
-By default this module contains a simple Java verticle which listens on the event bus and responds to `ping!`
-messages with `pong!`.
-
-This example also shows you how to write tests in Java, Groovy, Ruby and Python
-
+Es handelt sich, wie die anderen APPsist-Dienste auch, um ein Modul für das [Vert.x-Framework](http://vertx.io/vertx2/) (Version 2.1).
